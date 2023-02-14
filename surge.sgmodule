@@ -1,0 +1,65 @@
+#!name=
+#!desc=
+
+#!name=keep
+#!desc=keep
+#软件版本:7.44.1
+#脚本作者:King
+#更新时间:2023.2.14
+#使用声明：️此脚本仅供学习与交流，
+
+[Script]
+
+keep会员 = type=http-response,pattern=^https://api.gotokeep.com.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/keep.js
+
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/spotify-proto.js,script-update-interval=0
+
+百度网盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/bdcloud.js,script-update-interval=0
+
+Maimai_detail = type=http-response,pattern=^https:\//open.taou.com\/maimai\/member\/uh\/get_member_info_ios_v3,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/detail.js,script-update-interval=0
+
+Maimai_mypage = type=http-response,pattern=^https:\//maimai.cn\/bizmember\/vip_center\/me_tab_page_banner,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/mypage.js,script-update-interval=0
+
+Vsco_VIP = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/vsco.js,script-update-interval=0
+
+
+XMind_VIP = type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/XMind.js,script-update-interval=0
+
+
+#zhihu vip
+zhihu_self = type=http-response,pattern=^https://api.zhihu.com/people/self$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/people.js,script-update-interval=0
+zhihu_new_user = type=http-response,pattern=^https://api.zhihu.com/people/self/new_user_card,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/new_user.js,script-update-interval=0
+zhihu_vippruchase = type=http-response,pattern=^https://api.zhihu.com/unlimited/vip_purchase,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/vippruchase.js,script-update-interval=0
+zhihu_self1 = type=http-response,pattern=^https://api.zhihu.com/market/people/self,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/people1.js,script-update-interval=0
+zhihu_mine_personal = type=http-response,pattern=^https://api.zhihu.com/bazaar/mine/personal$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/mine_personal.js,script-update-interval=0
+zhihu_tab_header = type=http-response,pattern=^https://api.zhihu.com/bazaar/tab_header$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/tab_header.js,script-update-interval=0
+zhihu_feed = type=http-response,pattern=^https://api.zhihu.com/moments/recommend,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/feed.js,script-update-interval=0
+zhihu_recommend = type=http-response,pattern=^https://api.zhihu.com/topstory/recommend,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/recommend.js,script-update-interval=0
+zhihu_answer = type=http-response,pattern=^https://api.zhihu.com/v4/questions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/answer.js,script-update-interval=0
+
+通用订阅 = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/sub.js,script-update-interval=0
+
+
+爱奇艺_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/(t7z|kjp)\.cupid\.iqiyi\.com\/mixer\?,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+嘀嗒出行_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+Fa米家_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/start\/ad,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+BiliBili_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/(show|list),script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+美团外卖_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+小爱音箱_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/hd\.mina\.mi\.com\/splashscreen\/alert,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+联享家_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview.fcg,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+多点_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/cmsapi\.dmall\.com\/app\/home\/homepageStartUpPic,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+轻牛健康_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/gw\.yolanda\.hk\/api\/servlets\?endpoint=banners\/show_launch_banner,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/startup.js
+
+微信公众号_去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/wechat.js
+
+weibo_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),script-path=https://raw.githubusercontent.com/shwang1114/surge/main/wb_launch.js
+weibo_去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?://m?api\.weibo\.c(n|om)/2/(messageflow/notice|search/(container_timeline|finder)|statuses/(container_timeline_hot|container_timeline_unread|container_timeline|unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count),script-path=https://raw.githubusercontent.com/shwang1114/surge/main/wb_ad.js
+
+
+
+
+
+
+[MITM]
+hostname= %APPEND% api.gotokeep.com, capis.didapinche.com,capis*.didapinche.com,fmapp.chinafamilymart.com.cn,app.bilibili.com,wmapi.meituan.com,hd.mina.mi.com,api.m.jd.com,mi.gdt.qq.com,cmsapi.dmall.com,gw.yolanda.hk,t7z.cupid.iqiyi.com,kjp.cupid.iqiyi.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,spclient.wg.spotify.com,pan.baidu.com,open.taou.com,maimai.cn,api.revenuecat.com,www.xmind.cn,api.zhihu.com,buy.itunes.apple.com
