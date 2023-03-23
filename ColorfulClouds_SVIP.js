@@ -15,12 +15,12 @@ const RIGHTS_REGEX = /https?:\/\/biz\.cyapi\.cn\/membership_rights/;
 const RESULT = {
   is_vip: true,
   vip_type: "s",
-  svip_expired_at: 1882066669.9452950954,
+  svip_expired_at: 253402380504.9452950954,
 }
 const RESULT_WT = {
   vip: {
     enable: true,
-    expired_at: 1882066669.9452950954
+    expired_at: 253402380504.9452950954
   }
 }
 const RIGHTS = { 
