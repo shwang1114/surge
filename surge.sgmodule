@@ -20,7 +20,10 @@ Vsco_VIP = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/sub
 
 
 XMind_VIP = type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/XMind.js,script-update-interval=0
-Terminus = type=http-response,pattern=https:\/\/api\.termius\.com\/api\/v3\.3\/auth\/device\/login\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/Terminus.js,script-update-interval=0
+Terminus_login = type=http-response,pattern=https:\/\/api\.termius\.com\/api\/v3\.3\/auth\/device\/login\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/Terminus.js,script-update-interval=0
+
+Terminus_account = type=http-response,pattern=https:\/\/api\.termius\.com\/api\/v4\/bulk\/account\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/Terminus.js,script-update-interval=0
+
 
 Pdfexpert = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/refresh$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/Pdfexpert.vip.js,script-update-interval=0
 
