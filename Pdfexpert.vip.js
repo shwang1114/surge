@@ -1,15 +1,8 @@
 var obj = JSON.parse($response.body);
 
-obj= {
-  "originalTransactionId": "20000618444996",
-  "subscriptionState": "trial",
-  "isInGracePeriod": false,
-  "subscriptionExpirationDate": "13:15 03/11/2099",
-  "subscriptionAutoRenewStatus": "autoRenewOn",
-  "isEligibleForIntroPeriod": false,
-  "isPDFExpert6User": false,
-  "subscriptionReceiptId": "1572178404000"
-};
+obj["newAccount"]=true;
+obj["linkedProducts"][0]["inAppStates"][0]["state"]="active";
+obj["linkedProducts"][0]["inAppStates"][0]["expirationDate"]="17:12 04\/04\/9999";
 
 $done({body: JSON.stringify(obj)});
 
