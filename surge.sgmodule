@@ -8,6 +8,8 @@
 
 [Script]
 
+全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
+
 keep会员 = type=http-response,pattern=^https://api.gotokeep.com.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/keep.js
 
 百度网盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shwang1114/surge/main/bdcloud.js,script-update-interval=0
@@ -56,4 +58,4 @@ weibo_去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:
 
 
 [MITM]
-hostname= %APPEND% api.gotokeep.com, capis.didapinche.com,capis*.didapinche.com,fmapp.chinafamilymart.com.cn,app.bilibili.com,wmapi.meituan.com,hd.mina.mi.com,api.m.jd.com,mi.gdt.qq.com,cmsapi.dmall.com,gw.yolanda.hk,t7z.cupid.iqiyi.com,kjp.cupid.iqiyi.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,spclient.wg.spotify.com,pan.baidu.com,open.taou.com,maimai.cn,api.revenuecat.com,www.xmind.cn,api.zhihu.com,buy.itunes.apple.com,biz.caiyunapp.com
+hostname= %APPEND% ap*.intsig.net, api.gotokeep.com, capis.didapinche.com,capis*.didapinche.com,fmapp.chinafamilymart.com.cn,app.bilibili.com,wmapi.meituan.com,hd.mina.mi.com,api.m.jd.com,mi.gdt.qq.com,cmsapi.dmall.com,gw.yolanda.hk,t7z.cupid.iqiyi.com,kjp.cupid.iqiyi.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,spclient.wg.spotify.com,pan.baidu.com,open.taou.com,maimai.cn,api.revenuecat.com,www.xmind.cn,api.zhihu.com,buy.itunes.apple.com,biz.caiyunapp.com
