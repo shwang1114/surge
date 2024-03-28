@@ -10,8 +10,8 @@ hostname = %APPEND% biz.caiyunapp.com
 */
 
 const SCRIPT_NAME = '彩云天气';
-const USER_REGEX = /https?:\/\/biz\.cyapi\.cn\/v2\/user;
-const RIGHTS_REGEX = /https?:\/\/biz\.cyapi\.cn\/membership_rights;
+const USER_REGEX = /https?:\/\/biz\.cyapi\.cn\/v2\/user.+;
+const RIGHTS_REGEX = /https?:\/\/biz\.cyapi\.cn\/membership_rights.+;
 const RESULT = {
   is_vip: true,
   vip_type: "s",
